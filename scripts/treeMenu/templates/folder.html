@@ -1,0 +1,12 @@
+<!--<input type="checkbox" ng-model="_folder.checkbox"/>-->
+<span class="toggle"></span>
+<input type="checkbox" ng-click="clickCheckbox($event)" id="{{_folder.name}}" name="{{_folder.name}}"
+       ng-show="{{_folder.checkbox}}"/>
+<!--<span class="toggle-image"><img src="/images/toggle-small.png" alt=""/></span>-->
+<!--<i class="fa fa-folder"></i>-->
+<label class="child folder-icon" style="margin-left: 5px;"  ng-show="{{!_folder.checkbox}}">{{_folder.name}}</label>
+<label class="child folder-icon" ng-show="{{_folder.checkbox}}">{{_folder.name}}</label>
+<span class="toggle-image" ng-click="toggle(); showSmall = !showSmall" ng-show="{{_folder.toggle}}" >
+    <img ng-show="!showSmall" src="/images/toggle-small.png" alt=""/>
+    <img ng-show="showSmall" src="images/toggle-small-expand.png" alt=""/>
+</span>

@@ -1,0 +1,72 @@
+/* BEGIN DECLARE VARIABLE */
+/* BEGIN DECLARE FUNCTION */
+/* END DECLARE*/
+ol.left-menu-tree,
+ol.left-menu-tree ol {
+  list-style: none;
+  padding: 0;
+}
+ol.left-menu-tree {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+ol.left-menu-tree label.root {
+  background: url("/images/home.png") 10px 0 no-repeat;
+/*background url($image-home) 10px 0px no-repeat*/
+  padding-left: 3.5rem;
+}
+ol.left-menu-tree label.document-icon {
+  background: url("/images/document.png") 9px 0 no-repeat;
+  padding-left: 3.4rem;
+}
+ol.left-menu-tree label.folder-icon {
+  background: url("/images/folder-horizontal.png") 5px 0 no-repeat;
+  padding-left: 3rem;
+  position: relative;
+}
+ol.left-menu-tree li {
+  margin: 0;
+  padding: 0 1.2rem;
+  line-height: 20px;
+  color: #369;
+  font-weight: bold;
+  position: relative;
+}
+ol.left-menu-tree ol {
+  margin-left: 1.3rem;
+  position: relative;
+  margin-top: -0.5rem;
+}
+ol.left-menu-tree ol li:last-child:before {
+  background: #fff;
+  height: auto;
+  top: 1rem;
+  bottom: 0;
+}
+ol.left-menu-tree ol li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0.5rem;
+  width: 1.5rem;
+  height: 0;
+  top: 1rem;
+  border-top: 1px solid;
+}
+ol.left-menu-tree ol:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0.5rem;
+  width: 0;
+  top: 0;
+  bottom: 0;
+  border-left: 1px solid;
+}
+ol.left-menu-tree input {
+  margin-left: 1.2rem;
+}
+ol.left-menu-tree .toggle-image {
+  position: absolute;
+  left: -0.2rem;
+}

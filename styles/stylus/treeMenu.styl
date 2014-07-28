@@ -1,0 +1,72 @@
+/* BEGIN DECLARE VARIABLE */
+$text-color = #369
+$font-size = 1.4rem
+$image-home = '/images/home.png'
+$image-document = '/images/document.png'
+$image-folder = '/images/folder-horizontal.png'
+$background = white
+$border-line = 1px solid
+
+/* BEGIN DECLARE FUNCTION */
+background-icon(left, right, icon)
+  background url(icon) left right no-repeat
+
+draw()
+  content ""
+  display block
+  position absolute
+  left 0.5rem
+/* END DECLARE*/
+
+ol.left-menu-tree
+ol.left-menu-tree ol
+  list-style none
+  padding 0
+
+ol.left-menu-tree
+  margin-bottom 1rem
+  font-size $font-size
+  label.root
+    background-icon(10px, 0, $image-home)
+    /*background url($image-home) 10px 0px no-repeat*/
+    padding-left 3.5rem
+  label.document-icon
+    background-icon(9px, 0, $image-document)
+    padding-left 3.4rem
+  label.folder-icon
+    background-icon(5px, 0, $image-folder)
+    padding-left 3rem
+    position relative
+  li
+    margin 0
+    padding 0 1.2rem
+    line-height 20px
+    color $text-color
+    font-weight bold
+    position relative
+  ol
+    margin-left 1.3rem
+    position relative
+    margin-top -0.5rem
+    li:last-child:before
+      background $background
+      height auto
+      top 1rem
+      bottom: 0
+    li:before
+      draw()
+      width 1.5rem
+      height 0
+      top 1rem
+      border-top $border-line
+  ol:before
+    draw()
+    width 0
+    top 0
+    bottom 0
+    border-left $border-line
+  input
+    margin-left 1.2rem
+  .toggle-image
+    position absolute
+    left -0.2rem
